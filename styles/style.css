@@ -195,3 +195,21 @@ p {
     flex-direction: column;
     justify-content: center;
 }
+
+.auth-main label, .auth-main button {
+    display: block;
+}
+
+.auth-main button {
+    margin: 5px;
+}
+
+.auth-main {
+    flex-direction: row;
+}
+
+#logout {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}

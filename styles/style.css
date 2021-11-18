@@ -189,3 +189,9 @@ p {
 .right {
     overflow: scroll;
 }
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

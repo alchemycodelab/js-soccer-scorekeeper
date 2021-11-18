@@ -17,6 +17,7 @@ body {
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
+    background-image: url('../assets/field.png');
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
@@ -32,12 +33,6 @@ main {
 
 section {
     background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
@@ -56,10 +51,9 @@ header {
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: white;
     box-shadow: var(--shadow);
 }
-
 
 h2 {
     font-size: 1.8rem;
@@ -81,33 +75,108 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
+
+
+#past-games-container {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
+    flex-wrap: wrap;
+    justify-content: center;
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+#past-games-container .game {
+    margin: 10px;
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+#current-game-container {
+    display: flex;
+    justify-content: center;
+}
 
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
+.game {
+    border: solid 1px black;
+    text-align: center;
+    display: flex;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
 
-  }
+.team {
+    max-width: 200px;
+    text-overflow: ellipsis;
+}
+
+.game .name {
+    font-size: 1.3rem;
+    border-bottom: solid 2px black;
+    text-overflow: ellipsis;
+}
+
+.game .score {
+    font-size: 1.3rem;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons .top-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons .top-buttons .left-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons .top-buttons .right-buttons {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.top-buttons h3 {
+    border-bottom: solid 1px black;
+    text-align: center;
+}
+
+.name-form {
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.buttons .bottom-buttons {
+    text-align: center;
+    padding: 20px;
+}
+
+.undo {
+    font-size: .6rem;
+}
+
+.form-and-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-section {
+    width: 90%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.left, .right {
+    background-color: white;
+    margin: 10px;
+    padding: 40px;
+}

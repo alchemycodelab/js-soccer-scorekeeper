@@ -2,7 +2,7 @@ import {
     logout, 
     checkAuth,
     getGames,
-    saveGame,
+    createGame,
 } from '../fetch-utils.js';
 // import functions and grab DOM elements
 const currentGameEl = document.getElementById('current-game-container');
@@ -131,7 +131,7 @@ function renderAllGames() {
 
 finishGameButton.addEventListener('click', async() => {
     
-    await saveGame(currentGame);
+    await createGame(currentGame);
     
     const games = await getGames();
 

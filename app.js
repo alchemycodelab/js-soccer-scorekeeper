@@ -37,34 +37,34 @@ nameForm.addEventListener('submit', (e) => {
     currentGame.name2 = name2;
     
     nameForm.reset();
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
 
 teamOneAddButton.addEventListener('click', () => {
     currentGame.score1++;
     
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
 teamTwoAddButton.addEventListener('click', () => {
     currentGame.score2++;
 
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
 teamOneSubtractButton.addEventListener('click', () => {
     currentGame.score1--;
 
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
 teamTwoSubtractButton.addEventListener('click', () => {
     currentGame.score2--;
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
-function updateCurrentGameEl() {
+function displayCurrentGameEl() {
     currentGameEl.textContent = '';
 
     teamOneLabel.textContent = currentGame.name1;
@@ -107,7 +107,7 @@ function renderTeam(name, score) {
 }
 
 
-function renderAllGames() {
+function displayAllGames() {
     pastGamesEl.textContent = '';
 
     for (let game of pastGames) {
@@ -124,7 +124,7 @@ finishGameButton.addEventListener('click', () => {
     
     pastGames.push(currentGame);
 
-    renderAllGames();
+    displayAllGames();
     
     currentGame = {
         name1: '',
@@ -133,7 +133,7 @@ finishGameButton.addEventListener('click', () => {
         score2: 0
     };
 
-    updateCurrentGameEl();
+    displayCurrentGameEl();
 });
 
-updateCurrentGameEl();
+displayCurrentGameEl();
